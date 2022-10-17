@@ -12,7 +12,10 @@ public class App {
 		String name1 = j1.getName();
 		
 		JavaBean2 j2 = new JavaBean2();
+		
 		j2.setCompany("tesla");
+		j2.setLocation("usa");
+		j2.setScore(300);
 		
 		String company2 = j2.getCompany();
 		Integer score2 = j2.getScore();
