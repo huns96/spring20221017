@@ -6,7 +6,7 @@ SELECT * FROM OrderDetails WHERE ProductID IN (11, 42, 72);
 
 -- '1996-07-04'에 주문된 상품명들 조회
 SELECT p.ProductName FROM Orders o JOIN OrderDetails d ON o.OrderID = d.OrderID
-								 JOIN Products p ON d.ProductID = p.ProductID
+								   JOIN Products p ON d.ProductID = p.ProductID
 WHERE o.OrderDate = '1996-07-04';
 
 -- '1996-07-04'에 주문한 총 주문 금액
