@@ -8,5 +8,5 @@ public interface Mapper05 {
 	JavaBean07 getOrder();
 	JavaBean08 getOrder2();
 	JavaBean09 getProduct();
-	
 }
+
