@@ -45,8 +45,16 @@
 	VALUES (#{name}, #{contactname}, #{address}, #{city}, #{postalcode}, #{country})
 	</insert>
 	
+	<insert id="insertCustomerAndGetKey" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+	VALUES ('SON', 'HM', 'london', 'london', 111111, 'korea')
 	
+	</insert>
 	
+	<insert id="insertSupplierAndGetKey" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO Suppliers (SupplierName, ContactName, Address, City, PostalCode, Country)
+	VALUES (#{name}, #{contactname}, #{address}, #{city}, #{postalcode}, #{country})
+	</insert>
 	
 	
 	
