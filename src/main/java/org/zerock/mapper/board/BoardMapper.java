@@ -19,6 +19,12 @@ public interface BoardMapper {
 
 	int countAll(String type, String keyword);
 
+	int insertFile(int id, String fileName);
+
+	int deleteFileByBoardId(int id);
+
+	int deleteFileByBoardIdAndFileName(int id, String fileName);
+
 }
 
 
