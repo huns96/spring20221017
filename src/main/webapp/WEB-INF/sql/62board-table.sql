@@ -93,8 +93,15 @@ SELECT * FROM File ORDER BY 1 DESC;
 	WHERE
 		b.id = 2050;
 
-
-
+-- Member 테이블 만들기
+CREATE	TABLE Member(
+	id VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    inserted DATETIME DEFAULT NOW()
+);
+DESC Member;
+SELECT * FROM Member;
 
 
 
