@@ -15,4 +15,7 @@ public interface MemberMapper {
 	int update(MemberDto member);
 
 	int deleteById(String id);
+
+	MemberDto selectByEmail(String email);
+
 }

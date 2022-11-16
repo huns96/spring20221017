@@ -101,7 +101,33 @@ CREATE	TABLE Member(
     inserted DATETIME DEFAULT NOW()
 );
 DESC Member;
+
 SELECT * FROM Member;
+
+SELECT * FROM Member ORDER BY inserted DESC;
+
+SELECT 
+		id,
+		password,
+		email,
+		inserted
+	FROM
+		Member
+	ORDER BY
+		id ;
+
+-- Member 테이블에 nickName 컬럼 추가
+ALTER TABLE Member
+ADD COLUMN nickName VARCHAR(255) NOT NULL UNIQUE DEFAULT id AFTER id;
+
+DESC Member;
+
+SELECT * FROM Member;
+
+SET SQL_SAFE_UPDATES = 1;
+
+DELETE FROM Member
+WHERE id <> 'abcd';
 
 
 
