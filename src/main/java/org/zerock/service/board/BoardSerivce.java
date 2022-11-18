@@ -17,8 +17,10 @@ public class BoardSerivce {
 		return mapper.insert(board);
 	}
 
-	public List<BoardDto> listBoard() {
-		return mapper.list();
+	public List<BoardDto> listBoard(int page) {
+		int records = 10;
+		int offset = (page - 1) * records;
+		return mapper.list(offset, records);
 	}
 
 	public BoardDto get(int id) {

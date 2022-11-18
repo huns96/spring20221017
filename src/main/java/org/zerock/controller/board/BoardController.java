@@ -43,10 +43,10 @@ public class BoardController {
 	}
 	
 	@GetMapping("list")
-	public void list(Model model) {
+	public void list(@RequestParam(name = "page", defaultValue = "1") int page, Model model) {
 		// request param 수집
 		// business logic
-		List<BoardDto> list = service.listBoard();
+		List<BoardDto> list = service.listBoard(page);
 		// add attribute
 		model.addAttribute("boardList", list);
 		//forward
