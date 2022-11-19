@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.board.BoardDto;
+import org.zerock.domain.board.PageInfo;
 import org.zerock.service.board.BoardSerivce;
 
 @Controller
@@ -43,10 +44,10 @@ public class BoardController {
 	}
 	
 	@GetMapping("list")
-	public void list(@RequestParam(name = "page", defaultValue = "1") int page, Model model) {
+	public void list(@RequestParam(name = "page", defaultValue = "1") int page, PageInfo pageInfo, Model model) {
 		// request param 수집
 		// business logic
-		List<BoardDto> list = service.listBoard(page);
+		List<BoardDto> list = service.listBoard(page, pageInfo);
 		// add attribute
 		model.addAttribute("boardList", list);
 		//forward

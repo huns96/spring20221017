@@ -16,5 +16,7 @@ public interface BoardMapper {
 	int update(BoardDto board);
 	
 	int delete(int id);
+
+	int countAll();
 	
 }

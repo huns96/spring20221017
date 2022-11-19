@@ -53,7 +53,7 @@
 			<div class="col">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
-				  	<c:forEach begin="1" end="20" var="pageNumber">
+				  	<c:forEach begin="1" end="${pageInfo.lastPageNumber }" var="pageNumber">
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageNumber }"></c:param>
 				  		</c:url>
