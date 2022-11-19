@@ -55,6 +55,7 @@
 					  	<c:url value="/board/list" var="listLink">
 					  		<c:param name="page" value="1"></c:param>
 					  		<c:param name="q" value="${param.q }"></c:param>
+					  		<c:param name="t" value="${param.t }"></c:param>
 					  	</c:url>
 					  		<li class="page-item">
 					  			<a href="${listLink}" class="page-link">
@@ -67,6 +68,7 @@
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.jumpPrevPageNumber }"></c:param>
 				  			<c:param name="q" value="${param.q }"></c:param>
+				  			<c:param name="t" value="${param.t }"></c:param>
 				  		</c:url>
 				  		<li class="page-item">
 				  		<a href="${listLink }" class="page-link">
@@ -79,6 +81,7 @@
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageNumber }"></c:param>
 				  			<c:param name="q" value="${param.q }"></c:param>
+				  			<c:param name="t" value="${param.t }"></c:param>
 				  		</c:url>
 				    	<li class="page-item
 				    		<%-- 현재 페이지에 active 클래스 추가 --%>
@@ -91,6 +94,7 @@
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.jumpNextPageNumber }"></c:param>
 				  			<c:param name="q" value="${param.q }"></c:param>
+				  			<c:param name="t" value="${param.t }"></c:param>
 				  		</c:url>
 				  		<li class="page-item">
 				  			<a href="${listLink }" class="page-link">
@@ -103,6 +107,7 @@
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.lastPageNumber }"></c:param>
 				  			<c:param name="q" value="${param.q }"></c:param>
+				  			<c:param name="t" value="${param.t }"></c:param>
 				  		</c:url>
 				  			<li class="page-item">
 				  				<a href="${listLink }" class="page-link">
