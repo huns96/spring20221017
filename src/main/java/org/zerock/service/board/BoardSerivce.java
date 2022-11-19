@@ -25,6 +25,12 @@ public class BoardSerivce {
 		int countAll = mapper.countAll();
 		int lastPage = (countAll - 1) / records + 1;
 		
+		int leftPageNumber = (page - 1) / 10 * 10 + 1;
+		int rightPageNumber = leftPageNumber + 9;
+		rightPageNumber = Math.min(rightPageNumber, lastPage);
+		
+		pageInfo.setLeftPageNumber(leftPageNumber);
+		pageInfo.setRightPageNumber(rightPageNumber);
 		pageInfo.setLastPageNumber(lastPage);
 		
 		return mapper.list(offset, records);

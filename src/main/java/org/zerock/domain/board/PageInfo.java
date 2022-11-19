@@ -6,4 +6,6 @@ import lombok.Data;
 public class PageInfo {
 
 	private int lastPageNumber;
+	private int leftPageNumber;
+	private int rightPageNumber;
 }
