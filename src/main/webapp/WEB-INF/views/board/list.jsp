@@ -54,6 +54,7 @@
 				  	<c:if test="${pageInfo.currentPageNumber !=  1}">
 					  	<c:url value="/board/list" var="listLink">
 					  		<c:param name="page" value="1"></c:param>
+					  		<c:param name="q" value="${param.q }"></c:param>
 					  	</c:url>
 					  		<li class="page-item">
 					  			<a href="${listLink}" class="page-link">
@@ -65,6 +66,7 @@
 				  	<c:if test="${pageInfo.hasPrevButton }">
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.jumpPrevPageNumber }"></c:param>
+				  			<c:param name="q" value="${param.q }"></c:param>
 				  		</c:url>
 				  		<li class="page-item">
 				  		<a href="${listLink }" class="page-link">
@@ -76,6 +78,7 @@
 				  	<c:forEach begin="${pageInfo.leftPageNumber }" end="${pageInfo.rightPageNumber }" var="pageNumber">
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageNumber }"></c:param>
+				  			<c:param name="q" value="${param.q }"></c:param>
 				  		</c:url>
 				    	<li class="page-item
 				    		<%-- 현재 페이지에 active 클래스 추가 --%>
@@ -87,6 +90,7 @@
 				  	<c:if test="${pageInfo.hasNextButton }">
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.jumpNextPageNumber }"></c:param>
+				  			<c:param name="q" value="${param.q }"></c:param>
 				  		</c:url>
 				  		<li class="page-item">
 				  			<a href="${listLink }" class="page-link">
@@ -98,6 +102,7 @@
 				  	<c:if test="${pageInfo.currentPageNumber != pageInfo.lastPageNumber }">
 				  		<c:url value="/board/list" var="listLink">
 				  			<c:param name="page" value="${pageInfo.lastPageNumber }"></c:param>
+				  			<c:param name="q" value="${param.q }"></c:param>
 				  		</c:url>
 				  			<li class="page-item">
 				  				<a href="${listLink }" class="page-link">
