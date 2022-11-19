@@ -2,6 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ attribute name="active" %>
 
+<style>
+#searchTypeSelect{
+	width: auto;
+}
+</style>
+
 <c:url value="/board/list" var="listLink" />
 <c:url value="/board/register" var="registerLink" />
 
@@ -25,7 +31,7 @@
       </ul>
       <form action="${listLink }" class="d-flex" role="search">
       
-      	<select name="t" id="" class="form-select">
+      	<select name="t" id="searchTypeSelect" class="form-select">
       		<option value="all">전체</option>
       		<option value="title" ${param.t == 'title' ? 'selected' : ''}>제목</option>
       		<option value="content" ${param.t == 'content' ? 'selected' : ''}>본문</option>
