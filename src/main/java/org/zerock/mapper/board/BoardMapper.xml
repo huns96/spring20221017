@@ -28,9 +28,20 @@
 		inserted
 	FROM Board
 	WHERE
+		<trim prefixOverrides="OR">
+		<if test="type == 'all' or type == 'title'">
 		title LIKE #{keyword}
+		</if>
+		
+		<if test="type == 'all' or type == 'content'">
 		OR content LIKE #{keyword}
+		</if>
+		
+		<if test="type == 'all' or type == 'writer'">
 		OR writer LIKE #{keyword}
+		</if>
+		</trim>
+		
 	ORDER BY Id DESC
 	LIMIT #{offset}, #{records}
 	</select>

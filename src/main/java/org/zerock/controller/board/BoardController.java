@@ -46,13 +46,14 @@ public class BoardController {
 	@GetMapping("list")
 	public void list(
 			@RequestParam(name = "page", defaultValue = "1") int page, 
+			@RequestParam(name = "t", defaultValue = "all") String type,
 			@RequestParam(name = "q", defaultValue = "" ) String keyword,
 			PageInfo pageInfo, 
 			Model model
 			) {
 		// request param 수집
 		// business logic
-		List<BoardDto> list = service.listBoard(page, keyword, pageInfo);
+		List<BoardDto> list = service.listBoard(page, type, keyword, pageInfo);
 		// add attribute
 		model.addAttribute("boardList", list);
 		//forward
