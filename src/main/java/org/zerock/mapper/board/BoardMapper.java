@@ -17,6 +17,6 @@ public interface BoardMapper {
 	
 	int delete(int id);
 
-	int countAll();
+	int countAll(String keyword);
 	
 }

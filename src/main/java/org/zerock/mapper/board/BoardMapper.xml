@@ -7,6 +7,10 @@
 	
 	<select id="countAll" resultType="int">
 	SELECT Count(*) FROM Board
+	WHERE
+		title LIKE #{keyword}
+		OR content LIKE #{keyword}
+		OR writer LIKE #{keyword}
 	</select>
 	
 
